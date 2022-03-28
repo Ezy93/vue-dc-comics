@@ -3,14 +3,40 @@
         <div class="top-footer">
             <div class="container">
                 <div class="nav-footer">
-                    <div class="ul-container">
+                    <div class="ul-vertical">
                         <ul>
                             <li>
-                                <a href="#"></a>
+                                <h4>dc commics</h4>
+                            </li>
+                            <li v-for="(element,index) in dcComicsLinks" :key="index">
+                                <a href="#">{{element}}</a>
                             </li>
                         </ul>
                         <ul>
-
+                            <li>
+                                <h4>shop</h4>
+                            </li>
+                            <li v-for="(element,index) in shopLinks" :key="index">
+                                <a href="#">{{element}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ul-horizontal">
+                        <ul>
+                            <li>
+                                <h4>dc</h4>
+                            </li>
+                            <li v-for="(element,index) in dcLinks" :key="index">
+                                <a href="#">{{element}}</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h4>sites</h4>
+                            </li>
+                            <li v-for="(element,index) in sitesLinks" :key="index">
+                                <a href="#">{{element}}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -32,10 +58,7 @@ export default {
     name: 'IndexFooter',
     data: function(){
         return {
-            topFooterLink:[
-                {
-                    title: "dc comics",
-                    linkList:[
+            dcComicsLinks:[
                         "Character",
                         "Comics",
                         "Movies",
@@ -43,19 +66,13 @@ export default {
                         "Games",
                         "Videos",
                         "News"
-                    ]
-                },
-                {
-                    title: "shop",
-                    linkList:[
+                    ],
+            shopLinks:[
                         "Shop DC",
                         "Shop DC Collectibles",
                         
-                    ]
-                },
-                {
-                    title: "dc",
-                    linkList:[
+                    ],
+            dcLinks:[
                         "Terms of Use",
                         "Privacy policy(New)",
                         "Ad Choices",
@@ -68,20 +85,17 @@ export default {
                         "Shop Help",
                         "Contact Us"
                         
-                    ]
-                },
-                {
-                    title: "sites",
-                    linkList:[
+                    ],
+            sitesLinks:[
                         "DC",
                         "Mad magazine",
                         "DC kids",
                         "DC universe",
                         "DC Power Visa",
-                    ]
-                },
+                    ],
                 
-            ]
+                
+            
         }
     },
     methods:{
@@ -96,23 +110,45 @@ export default {
 
         div.top-footer{
             background-image: url("../assets/images/footer-bg.jpg");
-            height: 300px;
-            div.logo-dc{
-                height: 100%;
-                background-image: url("../assets/images/dc-logo-bg.png")
-            }
+            
+                div.logo-dc{
+                    height: 100%;
+                    background-image: url("../assets/images/dc-logo-bg.png")
+                }
+                div.nav-footer{
+                    width: 50%;
+                    text-align: start;
+                    display: flex
+                }
+
+                div.logo-dc{
+                    width: 50%;
+                    background-image:url("../assets/images/dc-logo-bg.png");
+                }
             
         };
-        div.ul-container{
+        div.ul-vertical{
             display: flex;
             flex-direction: column;
         }
+        div.ul-horizontal{
+            display: flex;
+        }
         ul{
             list-style-type: none;
-            a{
-                color: #576a79;
-                text-decoration: none;
+            padding: 1rem;
+            li{
+                padding-bottom: .3rem;
+                a{
+                    color: #576a79;
+                    text-decoration: none;
+                }
             }
+        }
+        h4{
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 1rem;
         }
     }
 </style>

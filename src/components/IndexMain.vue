@@ -18,9 +18,9 @@
 <script>
 export default {
     name: "IndexMain",
-    data:function(){
+data:function(){
         return {}
-    },
+    },    
     
 }
 </script>

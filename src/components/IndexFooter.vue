@@ -46,8 +46,22 @@
             </div>
         </div>
         <div class="bot-footer">
-            <div class="container">
-                
+            <div class="container bottom-f">
+                <div>
+                    <button>
+                        <a href="#">sign-up now!</a>
+                    </button>
+                </div>
+                <div class="bot-footer-links">
+                    <h3>follow us</h3>
+                    <ul class="footer-img-links">
+                        <li v-for="(element,index) in footerLinks" :key="index">
+                            <a href="#">
+                                <img :src='`${element}`' alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -93,6 +107,10 @@ export default {
                         "DC universe",
                         "DC Power Visa",
                     ],
+            footerLinks:[
+                "../assets/images/footer-facebook.png",
+                
+            ]
                 
                 
             
@@ -132,6 +150,17 @@ export default {
 
         div.bot-footer{
             background-color: #303030;
+            div.bottom-f{
+                display: flex;
+                justify-content: space-between;
+                    div.bot-footer-links{
+                        display: flex;
+                        align-items: center;
+                        ul.footer-img-links{
+                            display: flex;
+                        }
+                    }
+            }
         }
         div.ul-vertical{
             display: flex;
@@ -156,6 +185,22 @@ export default {
             text-transform: uppercase;
             color: white;
             margin-bottom: 1rem;
+        }
+        h3{
+            text-transform: uppercase;
+            color: $brandColor;
+        }
+
+        button{
+            margin: 1.35rem 0rem ;
+            padding: .9rem;
+            background-color: transparent;
+            border: 2px solid $brandColor;
+                a{
+                    text-transform: uppercase;
+                    color: white;
+                    text-decoration: none;
+                }
         }
     }
 </style>

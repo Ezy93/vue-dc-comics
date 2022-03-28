@@ -47,7 +47,7 @@
         </div>
         <div class="bot-footer">
             <div class="container">
-
+                
             </div>
         </div>
     </div>
@@ -110,23 +110,29 @@ export default {
 
         div.top-footer{
             background-image: url("../assets/images/footer-bg.jpg");
-            
-                div.logo-dc{
-                    height: 100%;
-                    background-image: url("../assets/images/dc-logo-bg.png")
-                }
-                div.nav-footer{
-                    width: 50%;
-                    text-align: start;
-                    display: flex
-                }
+                div.container{
+                    display: flex;
+                    justify-content: space-between;
 
-                div.logo-dc{
-                    width: 50%;
-                    background-image:url("../assets/images/dc-logo-bg.png");
+                    div.nav-footer{
+                        width: 40%;
+                        text-align: start;
+                        display: flex
+                    }
+
+                    div.logo-dc{
+                        background-image: url("../assets/images/dc-logo-bg.png");
+                        background-position: center;
+                        background-size: cover;
+                        width: 45%;
+                        
+                    }
                 }
-            
         };
+
+        div.bot-footer{
+            background-color: #303030;
+        }
         div.ul-vertical{
             display: flex;
             flex-direction: column;
@@ -142,6 +148,7 @@ export default {
                 a{
                     color: #576a79;
                     text-decoration: none;
+                    font-size: .7rem;
                 }
             }
         }

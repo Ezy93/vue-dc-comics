@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header>
+        <header class="container">
             <nav>
                 <img src="../assets/images/dc-logo.png" alt="logo dc comics">
                 <ul>
@@ -70,9 +70,8 @@ export default{
 
 <style lang="scss" scoped>
     div{
-        width: 80%;
-        margin: 0 auto;
-
+        padding: .8rem 0rem;
+        
         nav{
             display: flex;
             justify-content: space-between;

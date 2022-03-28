@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <IndexHeader/>
+    <Index-Main/>
   </div>
 </template>
 
 <script>
 import IndexHeader from './components/IndexHeader.vue'
+import IndexMain from './components/IndexMain.vue'
 
 export default {
   name: 'App',
   components: {
-    IndexHeader
+    IndexHeader,
+    IndexMain
   }
 }
 </script>

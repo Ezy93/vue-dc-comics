@@ -56,8 +56,8 @@
                     <h3>follow us</h3>
                     <ul class="footer-img-links">
                         <li v-for="(element,index) in footerLinks" :key="index">
-                            <a href="#">
-                                <img :src="require(`@/assets/images/${element.img}`)" alt="">
+                            <a :href="element.url">
+                                <img :src="require(`@/assets/images/${element.img}`)" :alt="element.name">
                             </a>
                         </li>
                     </ul>
@@ -178,6 +178,11 @@ export default {
 
         div.bot-footer{
             background-color: #303030;
+            ul.footer-img-links{
+                li{
+                    margin: 0rem .5rem;
+                }
+            }
             div.bottom-f{
                 display: flex;
                 justify-content: space-between;

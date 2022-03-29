@@ -11,9 +11,7 @@
                     :productSeries="element.series"
                     :productType="element.type"
                     />
-                <button>
-                    load more
-                </button>
+                    
                 </div>
             </section>
             <section class="main-navigation">
@@ -161,15 +159,18 @@ data:function(){
 @import "../assets/scss/style.scss";
 
     main{
+        background-color: black;
         
         section.products{
-            
+            margin-bottom: 3rem;
             color: white;
-            background-color: black;
-            padding-bottom: 6rem;
+            padding-bottom: 1rem;
+
             div.container{
                 display: flex;
                 flex-wrap: wrap;
+                padding-top: 3rem;
+            
             }
             
         }

@@ -11,6 +11,9 @@
                     :productSeries="element.series"
                     :productType="element.type"
                     />
+                <button>
+                    load more
+                </button>
                 </div>
             </section>
             <section class="main-navigation">

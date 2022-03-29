@@ -57,7 +57,7 @@
                     <ul class="footer-img-links">
                         <li v-for="(element,index) in footerLinks" :key="index">
                             <a href="#">
-                                <img :src='`${element}`' alt="">
+                                <img :src="require(`@/assets/images/${element.img}`)" alt="">
                             </a>
                         </li>
                     </ul>
@@ -72,6 +72,7 @@ export default {
     name: 'IndexFooter',
     data: function(){
         return {
+
             dcComicsLinks:[
                         "Character",
                         "Comics",
@@ -81,11 +82,13 @@ export default {
                         "Videos",
                         "News"
                     ],
+
             shopLinks:[
                         "Shop DC",
                         "Shop DC Collectibles",
                         
                     ],
+
             dcLinks:[
                         "Terms of Use",
                         "Privacy policy(New)",
@@ -100,6 +103,7 @@ export default {
                         "Contact Us"
                         
                     ],
+
             sitesLinks:[
                         "DC",
                         "Mad magazine",
@@ -107,9 +111,33 @@ export default {
                         "DC universe",
                         "DC Power Visa",
                     ],
+
             footerLinks:[
-                "../assets/images/footer-facebook.png",
-                
+                {
+                    name:"facebook icon" ,
+                    img: "footer-facebook.png",
+                    url : "#",
+                },
+                {
+                    name:"twitter icon" ,
+                    img: "footer-twitter.png",
+                    url : "#",
+                },
+                {
+                    name:"youtube icon" ,
+                    img: "footer-youtube.png",
+                    url : "#",
+                },
+                {
+                    name:"pinterest icon" ,
+                    img: "footer-pinterest.png",
+                    url : "#",
+                },
+                {
+                    name:"periscope icon" ,
+                    img: "footer-periscope.png",
+                    url : "#",
+                },
             ]
                 
                 

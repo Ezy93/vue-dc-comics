@@ -2,7 +2,7 @@
   <div id="app">
     <IndexHeader/>
     <Index-Main/>
-    <IndexFooter/>
+    <IndexFooter/>                             
   </div>
 </template>
 

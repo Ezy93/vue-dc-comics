@@ -163,7 +163,7 @@ data:function(){
             
             color: white;
             background-color: black;
-            
+            padding-bottom: 6rem;
             div.container{
                 display: flex;
                 flex-wrap: wrap;

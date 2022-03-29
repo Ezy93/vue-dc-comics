@@ -1,6 +1,8 @@
 <template>
     <div class="product-card">
-        <img :src="thumbLinks" :alt="productSeries">
+        <div class="image-product">
+            <img :src="thumbLinks" :alt="productSeries">
+        </div>
         <h4>{{productSeries}}</h4>
     </div>
 </template>
@@ -14,8 +16,24 @@ export default {
 
 <style lang="scss" scoped>
     div.product-card{
-        width: calc(100% / 6);
+        width: calc(100% / 6 - 1rem);
+        height: 27vh;
         text-align: start;
+        margin-top: 4rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+
+        div.image-product{
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
         h4{
             padding: 1rem 0rem;
         }
